@@ -1,83 +1,98 @@
-# Tiamo AI Portfolio
+# 👋 Tiamo AI Portfolio
 
-这是一个可直接部署到 GitHub Pages 的中文 AI 作品集网站，包含：
+欢迎来到我的 AI 作品集。
 
-1. Starbucks AI Marketing Video
-2. 香港大学课程宣传视频
-3. AI Maze Game
+这里展示了我利用 AI 完成的视频创作、AI 协作开发和创意项目。
 
-## 一、把文件上传到 GitHub
+---
 
-建议新建一个仓库，仓库名填写：
+# 项目
 
-```text
-Tiamo666Tan.github.io
-```
+## ☕ Starbucks HK – HK In A Cup
 
-必须与 GitHub 用户名一致。然后将本文件夹中的所有内容上传到仓库根目录。
+**AI 营销视频**
 
-目录结构应保持为：
+### 项目简介
 
-```text
-Tiamo666Tan.github.io/
-├── index.html
-├── style.css
-└── assets/
-    ├── images/
-    │   ├── starbucks-cover.svg
-    │   └── hku-cover.svg
-    └── videos/
-        ├── starbucks-ai-video.mp4
-        └── hku-course-promo.mp4
-```
+为 Starbucks 香港制作 AI 营销视频。
 
-## 二、放入两个视频
+### 我的工作
 
-将 Starbucks 视频改名为：
+- 创意构思
+- Prompt 设计
+- 脚本编写
+- 分镜设计
+- 视频剪辑
+- 最终整合
 
-```text
-starbucks-ai-video.mp4
-```
+### AI 工具
 
-将 HKU 课程宣传视频改名为：
+- ChatGPT
+- Sora
 
-```text
-hku-course-promo.mp4
-```
+### 项目成果
 
-然后把两个文件放进：
+🥈 课程项目获得 **项目第二名**
 
-```text
-assets/videos/
-```
+---
 
-注意：GitHub 网页端单个文件通常不适合上传很大的视频。如果视频过大，建议先压缩至 100MB 以下；更大的视频建议上传至腾讯云 COS、阿里云 OSS、Vimeo 或 YouTube，再修改 HTML 中的视频地址。
+## 🎬 HKU Course Promotion Video
 
-## 三、开启 GitHub Pages
+**AI 宣传视频**
 
-进入仓库后：
+### 项目简介
 
-1. 点击 `Settings`
-2. 左侧点击 `Pages`
-3. `Source` 选择 `Deploy from a branch`
-4. `Branch` 选择 `main`
-5. 文件夹选择 `/root`
-6. 点击 `Save`
+利用 AI 制作香港大学课程宣传视频。
 
-几分钟后访问：
+### 我的工作
 
-```text
-https://tiamo666tan.github.io
-```
+- 脚本设计
+- 分镜设计
+- AI 视频素材生成
+- 视频剪辑
 
-## 四、修改文字
+### AI 工具
 
-网站的所有文字都在 `index.html` 里。点击该文件右上角铅笔图标即可在线修改。
+- ChatGPT
+- Sora
 
-## 五、当前链接
+### 项目成果
 
-游戏项目链接已经设置为：
+🎓 课程项目获得 **A**
 
-```text
+---
+
+## 🎮 Escape the Maze
+
+一个利用 GPT 协作完成的 Python 迷宫游戏。
+
+### 我的工作
+
+- 产品设计
+- 功能规划
+- Bug 测试
+- UI 优化
+- Prompt Engineering
+
+### AI 协助完成
+
+- Python 代码生成
+- 寻路算法
+- Bug 修复
+- UI 代码优化
+
+### GitHub
+
 https://github.com/Tiamo666Tan/AI-Maze-Game
-```
+
+---
+
+# 在线作品集
+
+https://tiamo666tan.github.io
+
+---
+
+# 联系方式
++86 13537322277
+849203613@qq.com
