@@ -1,186 +1,277 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="谭心悦的 AI 协作项目作品集，包括 AI 视频创作与 GPT 辅助编程项目。" />
-  <title>谭心悦｜AI 协作作品集</title>
-  <link rel="stylesheet" href="style.css" />
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Tiamo AI Portfolio
+</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">TIAMO / AI PORTFOLIO</a>
-    <nav aria-label="主导航">
-      <a href="#projects">项目</a>
-      <a href="#about">关于我</a>
-      <a href="https://github.com/Tiamo666Tan" target="_blank" rel="noreferrer">GitHub</a>
-    </nav>
-  </header>
 
-  <main id="top">
-    <section class="hero">
-      <p class="eyebrow">AI × MARKETING × CREATIVE TECHNOLOGY</p>
-      <h1>把 AI 从工具，变成<br />可以落地的作品。</h1>
-      <p class="hero-copy">
-        我通过 ChatGPT、生成式视频工具与 Python，将创意构思、脚本设计、
-        视频制作和基础产品开发转化为可展示的项目成果。
-      </p>
-      <div class="hero-actions">
-        <a class="button primary" href="#projects">查看项目</a>
-        <a class="button secondary" href="https://github.com/Tiamo666Tan/AI-Maze-Game" target="_blank" rel="noreferrer">
-          查看游戏代码
-        </a>
-      </div>
-    </section>
 
-    <section class="summary-strip" aria-label="项目概览">
-      <div>
-        <strong>3</strong>
-        <span>个 AI 协作项目</span>
-      </div>
-      <div>
-        <strong>A</strong>
-        <span>HKU 课程项目成绩</span>
-      </div>
-      <div>
-        <strong>#2</strong>
-        <span>Starbucks 项目班级排名</span>
-      </div>
-    </section>
+<header>
 
-    <section id="projects" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">SELECTED WORK</p>
-        <h2>项目展示</h2>
-      </div>
+<div class="logo">
+TIAMO / PORTFOLIO
+</div>
 
-      <article class="project featured">
-        <div class="project-number">01</div>
-        <div class="project-copy">
-          <div class="tags">
-            <span>AI VIDEO</span>
-            <span>MARKETING</span>
-            <span>STORYTELLING</span>
-          </div>
-          <h3>Starbucks HK — “HK In A Cup”</h3>
-          <p class="project-intro">
-            围绕香港本地文化与 Starbucks 品牌体验制作的 AI 营销视频。
-            我参与创意概念、脚本与镜头规划，并使用生成式 AI 完成素材制作与迭代。
-          </p>
-          <dl class="project-meta">
-            <div>
-              <dt>AI 工具</dt>
-              <dd>ChatGPT、生成式视频工具</dd>
-            </div>
-            <div>
-              <dt>我的工作</dt>
-              <dd>创意构思、Prompt、脚本、镜头规划、剪辑整合</dd>
-            </div>
-            <div>
-              <dt>项目成果</dt>
-              <dd>课程项目班级第二名</dd>
-            </div>
-          </dl>
-        </div>
-        <div class="video-shell">
-          <video controls preload="metadata" poster="assets/images/starbucks-cover.svg">
-            <source src="assets/videos/starbucks-ai-video.mp4" type="video/mp4" />
-            你的浏览器不支持视频播放。
-          </video>
+<nav>
 
-          
-        </div>
-      </article>
+<a href="#projects">
+项目
+</a>
 
-      <article class="project reverse">
-        <div class="project-number">02</div>
-        <div class="project-copy">
-          <div class="tags">
-            <span>COURSE PROMOTION</span>
-            <span>AI EDITING</span>
-            <span>HKU</span>
-          </div>
-          <h3>香港大学课程宣传视频</h3>
-          <p class="project-intro">
-            为香港大学课程制作介绍视频，将课程信息转化为更清晰、有节奏的视觉内容，
-            并通过 AI 辅助完成脚本、素材生成与剪辑优化。
-          </p>
-          <dl class="project-meta">
-            <div>
-              <dt>AI 工具</dt>
-              <dd>ChatGPT、生成式视频工具</dd>
-            </div>
-            <div>
-              <dt>我的工作</dt>
-              <dd>信息提炼、脚本结构、视觉节奏、剪辑与成片整合</dd>
-            </div>
-            <div>
-              <dt>项目成果</dt>
-              <dd>课程项目获得 A</dd>
-            </div>
-          </dl>
-        </div>
-        <div class="video-shell">
-          <video controls preload="metadata" poster="assets/images/hku-cover.svg">
-            <source src="assets/videos/hku-course-promo.mp4" type="video/mp4" />
-            你的浏览器不支持视频播放。
-          </video>
-      </article>
+<a href="#creative">
+创意制作
+</a>
 
-      <article class="project compact">
-        <div class="project-number">03</div>
-        <div class="project-copy">
-          <div class="tags">
-            <span>GPT CODING</span>
-            <span>PYTHON</span>
-            <span>PYGAME</span>
-          </div>
-          <h3>Escape the Maze</h3>
-          <p class="project-intro">
-            一个通过 GPT 协作完成的 Python 迷宫游戏，支持单人 AI 追踪与双人对战模式。
-            我负责需求定义、功能规划、测试、Bug 反馈和界面迭代，GPT 辅助代码生成与调试。
-          </p>
-          <div class="project-actions">
-            <a class="button primary" href="https://github.com/Tiamo666Tan/AI-Maze-Game" target="_blank" rel="noreferrer">
-              查看 GitHub 项目
-            </a>
-          </div>
-        </div>
-        <div class="code-card" aria-label="游戏功能摘要">
-          <span>Python / Pygame</span>
-          <h4>核心功能</h4>
-          <ul>
-            <li>单人 AI 自动追踪</li>
-            <li>本地双人对战</li>
-            <li>随机迷宫生成</li>
-            <li>A* 寻路与安全路径计算</li>
-            <li>计步、计时与产品化 UI</li>
-          </ul>
-        </div>
-      </article>
-    </section>
+<a href="#about">
+关于我
+</a>
 
-    <section id="about" class="section about">
-      <div>
-        <p class="eyebrow">ABOUT</p>
-        <h2>我如何与 AI 协作</h2>
-      </div>
-      <div class="about-grid">
-        <p>
-          我的重点不是单纯“使用 AI”，而是先定义目标、拆解任务、建立评价标准，
-          再通过 Prompt、测试和多轮迭代将 AI 输出转化为最终作品。
-        </p>
-        <p>
-          在视频项目中，我负责创意方向、内容判断和成片质量；在编程项目中，
-          我负责产品需求、功能验证、Bug 定位与交互优化。
-        </p>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <span>© 2026 Tan Xinyue</span>
-    <a href="https://github.com/Tiamo666Tan" target="_blank" rel="noreferrer">GitHub</a>
-  </footer>
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<h1>
+AI × Marketing × Creative Production
+</h1>
+
+
+<p>
+
+探索 AI 技术、市场营销与内容创作结合的项目实践。
+
+</p>
+
+
+</section>
+
+
+
+<section id="projects">
+
+
+<h2>
+AI 项目
+</h2>
+
+
+<div class="card">
+
+
+<h3>
+☕ Starbucks HK — "HK In A Cup"
+</h3>
+
+
+<p>
+
+围绕香港本地文化与 Starbucks 品牌体验，
+完成 AI 营销视频创意策划、脚本设计与视觉制作。
+
+</p>
+
+
+<video controls>
+
+<source src="assets/videos/starbucks-ai-video.mp4">
+
+</video>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h3>
+🎬 香港大学课程宣传视频
+</h3>
+
+
+<p>
+
+负责课程宣传视频创意策划，
+利用 AI 工具完成脚本、素材生成及视频剪辑优化。
+
+</p>
+
+
+<video controls>
+
+<source src="assets/videos/hku-course-promo.mp4">
+
+</video>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h3>
+🤖 AI Maze Game
+</h3>
+
+
+<p>
+
+使用 Python + AI 协作开发的互动小游戏，
+包含游戏设计、功能规划、代码生成及优化。
+
+</p>
+
+
+<a class="button"
+href="https://github.com/Tiamo666Tan/AI-Maze-Game">
+
+查看 Github Demo
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section id="creative">
+
+
+<h2>
+创意制作与项目管理
+</h2>
+
+
+
+<div class="video-card">
+
+
+<video autoplay muted loop playsinline>
+
+
+<source src="assets/videos/theatre-performance.mp4">
+
+
+</video>
+
+
+
+<div class="overlay">
+
+
+<h3>
+
+UCSD 浮生剧社
+2024 春季戏剧节
+
+</h3>
+
+
+<h4>
+导演 / 项目负责人
+</h4>
+
+
+<p>
+
+负责校园戏剧项目从策划、
+排练管理、团队协调到正式演出的完整流程。
+
+</p>
+
+
+<p>
+
+协调演员、舞美、灯光音效及摄影团队，
+推动大型舞台项目落地。
+
+</p>
+
+
+
+<a href="https://mp.weixin.qq.com/s/1HMQeLa4FnD35EodJ-J-Ug"
+target="_blank">
+
+查看公众号报道 →
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section id="about">
+
+
+<h2>
+关于我
+</h2>
+
+
+<p>
+
+Marketing student with experience in AI content creation,
+data analysis, and digital project execution.
+
+</p>
+
+
+<p>
+
+技能：
+ChatGPT / Sora / Python / Excel / SPSS /
+AI Video Generation / Marketing Analytics
+
+</p>
+
+
+
+</section>
+
+
+
+<footer>
+
+© 2026 Tiamo
+
+</footer>
+
+
 </body>
+
 </html>
