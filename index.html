@@ -1,126 +1,113 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>谭心悦｜互动个人作品集</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="谭心悦（Tiamo）的个人 AI 作品集：AI 视频、市场研究、内容制作与 GPT 协作项目。">
+  <title>Tiamo 谭心悦｜AI 作品与实践</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./assets/model-viewer.min.js"></script>
+  <script src="./script.js" defer></script>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="#top">TIAMO / PORTFOLIO</a>
-  <nav>
-    <a href="#projects">AI项目</a>
-    <a href="#research">市场研究</a>
-    <a href="#creative">创意制作</a>
-    <a href="#about">关于我</a>
-  </nav>
-</header>
+<main>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页"><strong>TIAMO</strong><span>谭心悦</span></a>
+    <nav aria-label="主导航"><a href="#work">AI作品</a><a href="#wphk">研究项目</a><a href="#about">关于我</a></nav>
+  </header>
 
-<main id="top">
-<section class="hero">
-  <div class="hero-copy reveal">
-    <p class="eyebrow">MARKETING × AI × DATA × CREATIVE PRODUCTION</p>
-    <p class="hello">你好呀！我是 👋</p>
-    <h1>谭心悦</h1>
-    <p class="pill">市场营销 × AI应用 × 数据分析 × 创意制作</p>
-    <p class="intro">香港大学市场营销硕士。我的项目覆盖品牌营销、用户研究、AI辅助内容创作、数据分析与跨团队项目执行。</p>
-    <div class="actions">
-      <a class="btn primary" href="#projects">探索我的作品</a>
-      <a class="btn" href="assets/documents/wphk-capstone-presentation.pdf" target="_blank">查看项目PPT</a>
+  <aside class="scroll-companion" id="scrollCompanion" aria-label="跟随页面旋转的 3D 肖像">
+    <model-viewer id="companionModel" src="./assets/tiamo-3d.glb" poster="./assets/tiamo-3d-poster.jpg" camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.35" exposure="1.05" camera-orbit="-8deg 76deg 105%" reveal="auto" loading="eager"></model-viewer>
+    <img class="model-fallback" src="./assets/tiamo-3d-poster.jpg" alt="Tiamo 3D 肖像">
+    <p><b>SCROLL / DRAG</b>你下滑，我也会跟着转</p>
+  </aside>
+
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <p class="kicker">TIAMO / 谭心悦</p>
+      <h1>个人 AI<br>作品与实践</h1>
+      <p class="hero-intro">香港大学市场营销硕士。喜欢把市场洞察、内容创意和 AI 工具组合起来，从一个想法开始，自己动手把它做成视频、研究、视觉或可运行的 Demo。</p>
+      <div class="keywords" aria-label="个人关键词"><span>AI 协作</span><span>市场洞察</span><span>内容制作</span><span>动手落地</span></div>
+      <a class="primary-action" href="#work">浏览我的作品 <span>↓</span></a>
     </div>
-  </div>
 
-  <div class="avatar-wrap reveal">
-    <div class="avatar-stage" id="avatarStage">
-      <span class="float f1">☕</span><span class="float f2">📊</span>
-      <span class="float f3">🎬</span><span class="float f4">&lt;/&gt;</span>
-      <div class="bubble" id="speechBubble">欢迎来探索我的作品 😎</div>
-      <img id="avatarImage" src="assets/images/tiamo-ip/wave.jpg" alt="互动个人IP">
-      <small>电脑：移动鼠标或点击互动<br>手机：点击头像切换表情</small>
+    <div class="orbit-stage" aria-label="可旋转的 Tiamo 3D 肖像">
+      <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+      <a class="marker marker-one" href="#starbucks"><i></i>STARBUCKS</a>
+      <a class="marker marker-two" href="#hku"><i></i>HKU</a>
+      <a class="marker marker-three" href="#wphk"><i></i>WPHK</a>
+      <a class="marker marker-four" href="#game"><i></i>GAME</a>
+      <div class="model-shell" id="heroModelShell">
+        <model-viewer id="heroModel" src="./assets/tiamo-3d.glb" poster="./assets/tiamo-3d-poster.jpg" alt="谭心悦的 3D 卡通肖像" camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.45" exposure="1.05" camera-orbit="-28deg 76deg 105%" min-camera-orbit="auto 60deg 70%" max-camera-orbit="auto 92deg 180%" reveal="auto" loading="eager"></model-viewer>
+        <img class="model-fallback" src="./assets/tiamo-3d-poster.jpg" alt="谭心悦的 3D 卡通肖像">
+      </div>
+      <div class="hello-card">
+        <video autoplay muted loop playsinline poster="./assets/tiamo-hello-poster.jpg"><source src="./assets/tiamo-hello.mp4" type="video/mp4"></video>
+        <div><span class="live-dot"></span>HELLO, I'M TIAMO</div>
+      </div>
+      <p class="scroll-note"><span>SCROLL TO ORBIT</span>往下滑，帮我转起来 ↘</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="stats reveal">
-  <div><strong class="count" data-target="2" data-prefix="#">#0</strong><span>Starbucks项目班级排名</span></div>
-  <div><strong>A</strong><span>HKU课程视频成绩</span></div>
-  <div><strong class="count" data-target="985">0</strong><span>WPHK在线研究样本</span></div>
-  <div><strong class="count" data-target="4" data-suffix="+">0</strong><span>跨领域项目经历</span></div>
-</section>
+  <section class="process-band" aria-label="AI 协作流程"><p>我的 AI 协作方式</p><ol><li>洞察与方向</li><li>脚本与 Prompt</li><li>生成与筛选</li><li>剪辑与迭代</li><li>最终交付</li></ol></section>
 
-<section id="projects" class="section">
-  <div class="heading reveal">
-    <p class="eyebrow">SELECTED WORK</p><h2>AI与数字创意项目</h2>
-    <p>从创意构思、Prompt设计和素材生成，到剪辑、质量控制与最终交付，我关注如何把AI输出转化为完整成果。</p>
-  </div>
-
-  <article class="card reveal">
-    <div>
-      <div class="tags"><b>01</b><span>AI VIDEO</span><span>MARKETING</span><span>STORYTELLING</span></div>
-      <h3>Starbucks HK — “HK In A Cup”</h3>
-      <p>围绕香港本地文化与Starbucks品牌体验设计的整合营销项目，以纪录片式叙事连接城市记忆、日常生活与限定产品概念。</p>
-      <dl><div><dt>我的工作</dt><dd>消费者洞察、创意概念、脚本与分镜、Prompt迭代及视频整合。</dd></div>
-      <div><dt>项目成果</dt><dd>课程项目班级第二名。</dd></div></dl>
+  <section class="work-index" id="work">
+    <div class="section-heading"><p>SELECTED WORK / 2024—2026</p><h2>从想法，到看得见的产出。</h2></div>
+    <div class="index-grid">
+      <a href="#starbucks"><b>01</b><span>Starbucks HK</span><small>AI VIDEO · BRAND STORY</small></a>
+      <a href="#hku"><b>02</b><span>HKU Course Promo</span><small>AI VIDEO · EDITING</small></a>
+      <a href="#wphk"><b>03</b><span>WeChat Pay HK</span><small>RESEARCH · STRATEGY</small></a>
+      <a href="#game"><b>04</b><span>Escape the Maze</span><small>GPT CODING · DEMO</small></a>
     </div>
-    <video controls poster="assets/images/starbucks-cover.svg"><source src="assets/videos/starbucks-ai-video.mp4" type="video/mp4"></video>
-  </article>
+  </section>
 
-  <article class="card reverse reveal">
-    <div>
-      <div class="tags"><b>02</b><span>COURSE PROMOTION</span><span>AI EDITING</span><span>HKU</span></div>
-      <h3>香港大学课程宣传视频</h3>
-      <p>将复杂课程信息重新组织为更清晰、有节奏的宣传内容，并通过AI辅助完成脚本、视觉素材与后期剪辑。</p>
-      <dl><div><dt>我的工作</dt><dd>信息提炼、脚本结构、视觉节奏、素材取舍与成片整合。</dd></div>
-      <div><dt>项目成果</dt><dd>课程项目获得A。</dd></div></dl>
+  <section class="project project-video" id="starbucks">
+    <div class="project-number">01 / AI VIDEO</div>
+    <div class="project-copy">
+      <p class="project-client">STARBUCKS HONG KONG · INTEGRATED MARKETING</p><h2>HK In A Cup</h2>
+      <p class="project-lead">用 AI 生成影像，把香港城市记忆变成一支有品牌温度的概念短片。</p>
+      <div class="project-description"><p>项目围绕香港本地文化与 Starbucks 品牌体验展开。我参与消费者洞察与创意概念，并与 GPT 协作梳理叙事脚本、镜头节奏和生成提示词。</p><p>AI 片段不是一次生成完成：我持续筛选素材、调整 Prompt、统一视觉风格，再完成剪辑、配乐与整支影片的最终整合。</p></div>
+      <div class="role-grid"><div><span>MY ROLE</span><b>洞察 / 脚本 / Prompt / 剪辑</b></div><div><span>AI COLLABORATION</span><b>GPT + 生成式影像工具</b></div><div><span>RESULT</span><b>课程项目班级第 2 名</b></div></div>
     </div>
-    <video controls poster="assets/images/hku-cover.svg"><source src="assets/videos/hku-course-promo.mp4" type="video/mp4"></video>
-  </article>
+    <div class="video-frame"><video controls playsinline preload="metadata" poster="./assets/starbucks-cover.svg"><source src="./assets/starbucks-ai-video.mp4" type="video/mp4"></video><p><span>PLAY</span>从脚本到生成，再到成片整合</p></div>
+  </section>
 
-  <article class="card reveal">
-    <div>
-      <div class="tags"><b>03</b><span>GPT CODING</span><span>PYTHON</span><span>PYGAME</span></div>
-      <h3>Escape the Maze</h3>
-      <p>通过GPT协作完成的Python迷宫游戏，支持单人AI追踪与本地双人对战。我负责需求定义、测试、Bug反馈和交互优化。</p>
-      <a class="btn primary" href="https://github.com/Tiamo666Tan/AI-Maze-Game" target="_blank">查看GitHub项目</a>
+  <section class="project project-video project-dark" id="hku">
+    <div class="project-number">02 / AI VIDEO</div>
+    <div class="video-frame"><video controls playsinline preload="metadata" poster="./assets/hku-cover.svg"><source src="./assets/hku-course-promo.mp4" type="video/mp4"></video><p><span>PLAY</span>把复杂课程信息变成清楚、有节奏的内容</p></div>
+    <div class="project-copy">
+      <p class="project-client">THE UNIVERSITY OF HONG KONG · COURSE PROMOTION</p><h2>课程宣传视频</h2>
+      <p class="project-lead">不是让 AI 替我做，而是让它进入信息整理、脚本、画面生成和剪辑判断的每一步。</p>
+      <div class="project-description"><p>面对信息量较大的课程内容，我先确定受众和沟通重点，再将卖点重组为更适合短视频观看的叙事结构。</p><p>通过 GPT 反复修改脚本表达，使用 AI 辅助视觉素材生成，并由我完成镜头取舍、节奏控制与成片质量把控。</p></div>
+      <div class="role-grid"><div><span>MY ROLE</span><b>信息提炼 / 脚本 / 视觉 / 后期</b></div><div><span>OUTPUT</span><b>完整课程宣传成片</b></div><div><span>RESULT</span><b>课程项目成绩 A</b></div></div>
     </div>
-    <div class="feature"><h4>核心功能</h4><ul><li>单人AI自动追踪</li><li>本地双人对战</li><li>随机迷宫生成</li><li>A*寻路</li><li>计步、计时与UI优化</li></ul></div>
-  </article>
-</section>
+  </section>
 
-<section id="research" class="section research">
-  <div class="heading reveal"><p class="eyebrow">RESEARCH & STRATEGY</p><h2>市场研究与商业分析</h2><p>将用户调研、统计分析与消费者洞察转化为目标人群判断、产品定位和增长策略。</p></div>
-  <article class="research-card reveal">
-    <div>
-      <div class="tags"><span>USER RESEARCH</span><span>SEGMENTATION</span><span>GROWTH STRATEGY</span></div>
-      <h3>WeChat Pay HK跨境汇款增长策略研究</h3>
-      <p>围绕香港至内地汇款市场，研究非用户的真实需求、功能认知、渠道选择和费用痛点，并提出目标用户识别及市场渗透策略。</p>
-      <div class="mini-stats"><div><strong>985</strong><span>在线样本</span></div><div><strong>479</strong><span>有需求用户</span></div><div><strong>133</strong><span>线下样本</span></div></div>
-      <a class="btn primary" href="assets/documents/wphk-capstone-presentation.pdf" target="_blank">查看完整项目PPT</a>
+  <section class="research-project" id="wphk">
+    <div class="research-topline"><span>03 / RESEARCH & STRATEGY</span><span>TENCENT · WECHAT PAY HK</span></div>
+    <div class="research-title"><div><p>CAPSTONE PROJECT</p><h2>跨境汇款增长策略研究</h2></div><p>围绕香港至内地汇款市场，识别非用户的真实需求、渠道选择、费用痛点和产品认知，并将调研结果转化为目标用户判断与市场渗透建议。</p></div>
+    <div class="research-dashboard">
+      <div class="metric metric-main"><span>ONLINE SURVEY</span><strong>985</strong><small>份有效在线样本</small></div>
+      <div class="metric"><span>HIGH-INTENT</span><strong>479</strong><small>名有汇款需求用户</small></div>
+      <div class="metric"><span>OFFLINE</span><strong>133</strong><small>份线下样本补充</small></div>
+      <div class="method-card"><span>RESEARCH TOOLKIT</span><div class="method-tags"><b>问卷设计</b><b>用户分群</b><b>SPSS</b><b>交叉分析</b><b>消费者洞察</b><b>增长策略</b></div></div>
     </div>
-    <iframe src="assets/documents/wphk-capstone-presentation.pdf#page=1&view=FitH" title="项目PPT预览"></iframe>
-  </article>
-</section>
+    <div class="research-flow"><div><b>01</b><span>定义问题</span><p>谁有真实需求，为什么仍未使用？</p></div><div><b>02</b><span>验证洞察</span><p>用定量数据识别关键阻碍与高潜人群。</p></div><div><b>03</b><span>形成策略</span><p>将结论转为定位、沟通和渗透建议。</p></div></div>
+    <a class="document-link" href="./assets/wphk-capstone-presentation.pdf" target="_blank" rel="noreferrer">查看完整项目文件 <span>PDF · 点击后打开 ↗</span></a>
+  </section>
 
-<section id="creative" class="section">
-  <div class="heading reveal"><p class="eyebrow">CREATIVE LEADERSHIP</p><h2>创意制作与项目管理</h2><p>涵盖排期管理、跨团队协调、舞台技术执行与最终演出质量把控。</p></div>
-  <article class="theatre reveal">
-    <video autoplay muted loop playsinline poster="assets/images/theatre-cover.jpg"><source src="assets/videos/theatre-performance.mp4" type="video/mp4"></video>
-    <div class="shade"></div>
-    <div class="theatre-copy"><div class="tags"><b>04</b><span>DIRECTING</span><span>PROJECT MANAGEMENT</span></div>
-      <h3>UCSD浮生剧社2024春季戏剧节</h3><p class="role">导演 / 项目负责人</p>
-      <p>统筹演员、舞美、道具、灯光音效与摄影团队，并负责彩排计划、技术调试和正式演出现场执行。</p>
-      <a class="btn light" href="https://mp.weixin.qq.com/s/1HMQeLa4FnD35EodJ-J-Ug" target="_blank">查看公众号完整报道</a>
-    </div>
-  </article>
-</section>
+  <section class="game-project" id="game">
+    <div class="game-copy"><p class="project-client">04 / GPT CODING · PYTHON · PYGAME</p><h2>Escape<br>the Maze</h2><p class="project-lead">我不只是向 GPT 要一段代码，而是像产品经理一样定义需求、测试、反馈 Bug，再把它迭代成真正能玩的 Demo。</p><ul><li><span>01</span>随机迷宫生成与 A* 寻路</li><li><span>02</span>单人 AI 自动追踪模式</li><li><span>03</span>本地双人对战与完整 UI</li><li><span>04</span>持续测试、Bug 反馈与交互优化</li></ul><a class="github-link" href="https://github.com/Tiamo666Tan/AI-Maze-Game" target="_blank" rel="noreferrer">查看 GitHub 项目 ↗</a></div>
+    <div class="game-screen"><div class="screen-bar"><i></i><i></i><i></i><span>GAME DEMO.mp4</span></div><video controls playsinline preload="metadata" poster="./assets/game-demo-poster.jpg"><source src="./assets/game-demo.mp4" type="video/mp4"></video></div>
+  </section>
 
-<section id="about" class="section">
-  <div class="heading reveal"><p class="eyebrow">ABOUT</p><h2>我的工作方式</h2></div>
-  <div class="about reveal"><p>先明确目标和受众，再拆解任务、选择方法与工具，并通过持续测试和反馈迭代成果。</p><p>用市场思维理解问题，用数据验证判断，用AI提升内容生产与执行效率，再通过项目管理推动落地。</p></div>
-</section>
+  <section class="creative-project">
+    <div class="creative-media"><video autoplay muted loop playsinline preload="metadata" poster="./assets/theatre-cover.jpg"><source src="./assets/theatre-performance.mp4" type="video/mp4"></video></div>
+    <div class="creative-copy"><p>05 / CREATIVE LEADERSHIP</p><h2>AI 之外，<br>我也负责让真实项目发生。</h2><p>在 UCSD 浮生剧社 2024 春季戏剧节担任导演与项目负责人，统筹演员、舞美、道具、灯光音效和摄影团队，并负责彩排排期、现场技术调试及最终演出执行。</p><div class="method-tags"><b>导演</b><b>项目管理</b><b>跨团队协作</b><b>现场执行</b></div><a href="https://mp.weixin.qq.com/s/1HMQeLa4FnD35EodJ-J-Ug" target="_blank" rel="noreferrer">查看完整报道 ↗</a></div>
+  </section>
+
+  <section class="about-section" id="about"><div><p>ABOUT TIAMO / 谭心悦</p><h2>市场思维理解问题，<br>AI 放大创意和执行。</h2></div><div class="about-body"><p>我习惯先明确目标和受众，再拆解任务、选择方法与工具。AI 对我而言不是一个单独的标签，而是一种把想法更快推向可见成果的协作方式。</p><p>我可以做洞察、写脚本、看数据，也愿意亲手剪片、测试代码、修改细节。希望每个项目最后都不止停留在“想法不错”，而是真的可以被打开、观看、体验和使用。</p><a href="mailto:849203613@qq.com">CONTACT / 849203613@qq.com ↗</a></div></section>
+  <footer><span>© 2026 TIAMO · 谭心悦</span><span>MARKETING × AI × MAKING</span></footer>
 </main>
-
-<footer><span>© 2026 Tan Xinyue</span><a href="mailto:849203613@qq.com">Email</a></footer>
-</body></html>
+</body>
+</html>
