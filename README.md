@@ -1,4 +1,4 @@
-# 谭心悦Tiamo · 个人作品集
+# 谭心悦Tiamo ·个人作品集（包括整个网页）
 
 欢迎来到我的个人作品集。
 
@@ -11,6 +11,9 @@ https://tiamo666tan.github.io/
 ---
 
 ## 项目内容
+
+### 3D可交互个人肖像
+（很高兴认识你！！）
 
 ### Starbucks HK《HK In A Cup》
 
