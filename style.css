@@ -70,18 +70,22 @@ nav a:hover::after { right: 0; }
 .orbit-b { inset: 23% -6% 1% 8%; border-color: rgba(25,24,23,.12); transform: rotate(17deg); }
 .orbit-c { inset: 7% 15% 18% -4%; border-color: rgba(154,121,85,.24); transform: rotate(37deg); }
 .model-shell { position: absolute; inset: -7% -4% -8% 0; z-index: 2; filter: drop-shadow(0 32px 42px rgba(50,40,30,.16)); }
-.model-shell model-viewer { width: 100%; height: 100%; background: transparent; --poster-color: transparent; cursor: grab; }
+.model-shell model-viewer { width: 100%; height: 100%; opacity: 0; background: transparent; --poster-color: transparent; cursor: grab; transition: opacity .45s ease; }
 .model-shell model-viewer:active { cursor: grabbing; }
-.model-fallback { display: none; }
-.no-3d model-viewer { display: none !important; }
-.no-3d .model-fallback { display: block; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; }
-.model-poster { display: grid; place-items: center; overflow: hidden; }
-.model-poster img { width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; }
-.model-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: 12px; }
-.model-note { position: absolute; z-index: 7; right: 6%; top: 8%; margin: 0; padding: 10px 12px; border-left: 1px solid var(--accent); background: rgba(242,240,235,.64); backdrop-filter: blur(8px); }
-.model-note b, .model-note span { display: block; }
-.model-note b { color: var(--accent); font: 700 9px "SFMono-Regular", Consolas; letter-spacing: .08em; }
-.model-note span { margin-top: 4px; color: var(--muted); font-size: 9px; }
+.model-shell.is-loaded model-viewer, .companion-model-shell.is-loaded model-viewer { opacity: 1; }
+.model-loading { position: absolute; inset: 0; z-index: 4; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; color: #5f5a53; font-size: clamp(13px,1vw,16px); line-height: 1.7; text-align: center; letter-spacing: .03em; pointer-events: none; transition: opacity .3s ease, visibility .3s ease; }
+.model-loading::before { content: ""; position: absolute; width: min(330px,58%); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle,rgba(154,121,85,.13),transparent 68%); }
+.model-loading i { position: relative; width: 30px; height: 30px; border: 1px solid rgba(154,121,85,.28); border-top-color: var(--accent); border-radius: 50%; animation: model-spin .85s linear infinite; }
+.model-loading span { position: relative; padding: 9px 14px; border: 1px solid rgba(154,121,85,.17); background: rgba(242,240,235,.72); backdrop-filter: blur(8px); }
+.is-loaded > .model-loading { opacity: 0; visibility: hidden; }
+.has-error > .model-loading i { display: none; }
+.has-error > .model-loading span { border-color: rgba(165,87,67,.24); }
+@keyframes model-spin { to { transform: rotate(360deg); } }
+.model-note { position: absolute; z-index: 7; right: 5%; top: 7%; max-width: 320px; margin: 0; padding: 14px 17px; border-left: 2px solid var(--accent); background: rgba(242,240,235,.8); box-shadow: 0 10px 32px rgba(50,40,30,.07); backdrop-filter: blur(10px); }
+.model-note b, .model-note span, .model-note em { display: block; }
+.model-note b { color: var(--accent); font: 700 11px "SFMono-Regular", Consolas; letter-spacing: .09em; }
+.model-note span { margin-top: 8px; color: #403d38; font-size: 14px; font-weight: 650; }
+.model-note em { margin-top: 5px; color: var(--muted); font: normal 11px/1.5 "SFMono-Regular", Consolas; }
 .marker { position: absolute; z-index: 5; display: flex; align-items: center; gap: 8px; color: #5f5a53; font: 600 10px "SFMono-Regular", Consolas; letter-spacing: .08em; }
 .marker i { width: 8px; height: 8px; border: 2px solid var(--paper); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 .marker-one { top: 20%; right: 2%; }
@@ -132,7 +136,12 @@ nav a:hover::after { right: 0; }
   transition: .4s ease;
 }
 .scroll-companion.is-visible { opacity: 1; pointer-events: auto; transform: translate(0,-50%); }
-.scroll-companion model-viewer, .scroll-companion img { display: block; width: 100%; height: 112px; object-fit: cover; --poster-color: transparent; mix-blend-mode: multiply; }
+.companion-model-shell { position: relative; width: 100%; height: 112px; overflow: hidden; }
+.scroll-companion model-viewer { display: block; width: 100%; height: 100%; opacity: 0; --poster-color: transparent; mix-blend-mode: multiply; transition: opacity .35s ease; }
+.model-loading-compact { gap: 7px; font-size: 9px; line-height: 1.3; }
+.model-loading-compact::before { width: 88px; }
+.model-loading-compact i { width: 18px; height: 18px; }
+.model-loading-compact span { padding: 4px 7px; }
 .scroll-companion p { margin: 6px 0 0; color: var(--muted); font-size: 8px; line-height: 1.45; }
 .scroll-companion b { display: block; color: var(--accent); font: 700 8px "SFMono-Regular", Consolas; letter-spacing: .08em; }
 
@@ -239,7 +248,10 @@ footer { min-height: 90px; margin: 0 clamp(24px,5vw,82px); border-top: 1px solid
   .hero h1 { font-size: clamp(55px,18vw,78px); }
   .hero-intro { font-size: 14px; }
   .orbit-stage { min-height: 460px; margin-top: 8px; }
-  .model-note { right: 1%; top: 3%; transform: scale(.86); transform-origin: top right; }
+  .model-note { right: 1%; top: 2%; max-width: 245px; padding: 11px 13px; }
+  .model-note b { font-size: 9px; }
+  .model-note span { margin-top: 6px; font-size: 12px; }
+  .model-note em { font-size: 9px; }
   .hello-card { width: 104px; right: 0; top: 38%; }
   .hero-personal-row { align-items: flex-start; flex-direction: column; gap: 16px; }
   .hello-card-left { width: 120px; right: auto; top: auto; flex-basis: auto; }

@@ -17,8 +17,10 @@
   </header>
 
   <aside class="scroll-companion" id="scrollCompanion" aria-label="跟随页面旋转的 3D 肖像">
-    <model-viewer id="companionModel" src="./assets/tiamo-3d.glb" poster="./assets/tiamo-3d-poster.png" camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.35" exposure="1.05" camera-orbit="-8deg 76deg 105%" reveal="auto" loading="eager" autoplay animation-name="CameraAction" auto-rotate auto-rotate-delay="0" rotation-per-second="10deg"></model-viewer>
-    <img class="model-fallback" src="./assets/tiamo-3d-poster.png" alt="Tiamo 3D 肖像">
+    <div class="companion-model-shell">
+      <model-viewer id="companionModel" data-src="./assets/tiamo-3d.glb" camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.35" exposure="1.05" camera-orbit="-8deg 76deg 105%" reveal="auto" loading="lazy" autoplay animation-name="CameraAction" auto-rotate auto-rotate-delay="0" rotation-per-second="10deg"></model-viewer>
+      <div class="model-loading model-loading-compact" aria-live="polite"><i></i><span>马上出现...</span></div>
+    </div>
     <p><b>SCROLL / DRAG</b>你下滑，我也会跟着转</p>
   </aside>
 
@@ -44,11 +46,10 @@
       <a class="marker marker-three" href="#wphk"><i></i>WPHK</a>
       <a class="marker marker-four" href="#game"><i></i>GAME</a>
       <div class="model-shell" id="heroModelShell">
-        <model-viewer id="heroModel" src="./assets/tiamo-3d.glb" poster="./assets/tiamo-3d-poster.png" alt="谭心悦的 3D 卡通肖像" camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.45" exposure="1.05" camera-orbit="-28deg 76deg 105%" min-camera-orbit="auto 60deg 70%" max-camera-orbit="auto 92deg 180%" reveal="auto" loading="eager" autoplay animation-name="CameraAction" auto-rotate auto-rotate-delay="0" rotation-per-second="8deg"></model-viewer>
-        <img class="model-fallback" src="./assets/tiamo-3d-poster.png
-          " alt="谭心悦的 3D 卡通肖像">
+        <model-viewer id="heroModel" src="./assets/tiamo-3d.glb" alt="谭心悦的 3D 卡通肖像" camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.45" exposure="1.05" camera-orbit="-28deg 76deg 105%" min-camera-orbit="auto 60deg 70%" max-camera-orbit="auto 92deg 180%" reveal="auto" loading="eager" autoplay animation-name="CameraAction" auto-rotate auto-rotate-delay="0" rotation-per-second="8deg"></model-viewer>
+        <div class="model-loading" aria-live="polite"><i></i><span>请等我一下啊～～<br>马上就跟你见面......</span></div>
       </div>
-      <p class="model-note"><b>ANIMATED 3D · 200 FRAMES</b><span>拖着我就可以360度认识我</span></p>
+      <p class="model-note"><b>ANIMATED 3D · 200 FRAMES</b><span>拖着我就可以 360° 认识我</span><em>滚动鼠标或双指缩放 · Zoom In / Zoom Out</em></p>
       <p class="scroll-note"><span>SCROLL TO ORBIT</span>往下滑，帮我转起来 ↘</p>
     </div>
   </section>
